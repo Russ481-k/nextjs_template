@@ -40,6 +40,17 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+.swiper{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+}
+
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
