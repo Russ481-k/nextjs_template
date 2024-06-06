@@ -1,4 +1,4 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, textDecoration } from "@chakra-ui/react";
 
 export const theme = extendTheme({
   fonts: {
@@ -52,36 +52,67 @@ export const theme = extendTheme({
     },
   },
   colorful: {
-    tabs:{
+    tabs: {
       tab: {
-        border: '2px solid',
-        borderColor: 'transparent',
+        border: "2px solid",
+        borderColor: "transparent",
         // use colorScheme to change background color with dark and light mode options
         bg: null,
-        borderTopRadius: 'lg',
-        borderBottom: 'none',
+        borderTopRadius: "lg",
+        borderBottom: "none",
         _selected: {
           bg: null,
-          color: 'white',
-          borderColor: 'inherit',
-          borderBottom: '1px',
-          mb: '-2px',
+          color: "white",
+          borderColor: "inherit",
+          borderBottom: "1px",
+          mb: "-2px",
         },
       },
       tablist: {
-        borderBottom: '2x solid',
-        borderColor: 'inherit',
+        borderBottom: "2x solid",
+        borderColor: "inherit",
       },
       tabpanel: {
-        border: '2px solid',
-        borderColor: 'inherit',
-        borderBottomRadius: 'lg',
-        borderTopRightRadius: 'lg',
+        border: "2px solid",
+        borderColor: "inherit",
+        borderBottomRadius: "lg",
+        borderTopRightRadius: "lg",
       },
-  
-    }
+    },
   },
-  
+  components: {
+    Link: {
+      baseStyle: {},
+      variants: {
+        bgDarkWhite: {
+          transition: ".5s",
+          _hover: {
+            opacity: 0.5,
+            textDecoration: "none",
+          },
+          _active: {
+            opacity: 0.8,
+          },
+        },
+      },
+    },
+    Button: {
+      baseStyle: {
+        textDecoration: "none",
+      },
+      variants: {
+        bgDarkWhite: {
+          transition: ".5s",
+          _hover: {
+            opacity: 0.5,
+          },
+          _active: {
+            opacity: 0.8,
+          },
+        },
+      },
+    },
+  },
 });
 
 export default theme;
