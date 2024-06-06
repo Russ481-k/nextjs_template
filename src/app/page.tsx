@@ -1,5 +1,5 @@
 "use client";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import {
   ArrowDownIcon,
   ArrowLeftIcon,
@@ -29,9 +29,9 @@ import {
 import Image from "next/image";
 import { useState } from "react";
 
-export const metadata: Metadata = {
-  title: "Next.js",
-};
+// export const metadata: Metadata = {
+//   title: "Next.js",
+// };
 
 export default function Page() {
   const { isOpen, onOpen, onClose } = useDisclosure();

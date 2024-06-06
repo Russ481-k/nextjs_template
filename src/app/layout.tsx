@@ -1,7 +1,5 @@
 "use client";
 
-import { Flex } from "@chakra-ui/react";
-import { Footer, TopBar } from "./components";
 import { fonts } from "./fonts";
 import { Providers } from "./providers";
 
@@ -10,19 +8,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const topBarHeight = "62px";
-  const welcomeImgHeight = "420px";
   return (
     <html lang="en" className={fonts.rubik.variable}>
       <body style={{ minHeight: "100vh" }}>
-        <Providers>
-          <TopBar
-            topBarHeight={topBarHeight}
-            welcomeImgHeight={welcomeImgHeight}
-          />
-          <Flex flexDir="column">{children}</Flex>
-          <Footer />
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
